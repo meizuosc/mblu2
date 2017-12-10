@@ -1,0 +1,31 @@
+BugID:144481, Date:Fri Aug 8 16:20:33 2014, Author:李丹, Git:aa2be289c0f47a252d4bb9452b65c1322788c189
+CVE-2014-0195. The dtls1_reassemble_fragment function in d1_both.c in OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h does not properly validate fragment lengths in DTLS ClientHello messages, which allows remote attackers to execute arbitrary code or cause a denial of service (buffer overflow and application crash) via a long non-initial fragment.
+
+BugID:144451, Date:Fri Aug 8 17:23:21 2014, Author:李丹, Git:1cc6ce4383ce28e6642a8b14c6639c0f617db0ca
+CVE-2014-0224. OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h does not properly restrict processing of ChangeCipherSpec messages, which allows man-in-the-middle attackers to trigger use of a zero-length master key in certain OpenSSL-to-OpenSSL communications, and consequently hijack sessions or obtain sensitive information, via a crafted TLS handshake, aka the "CCS Injection" vulnerability.
+
+BugID:109060, Date:Wed Apr 9 15:06:53 2014, Author:余新化, Git:69f4fef9be141f72edea3baaaad9b4fe13946aef
+CVE-2014-0160. The (1) TLS and (2) DTLS implementations in OpenSSL 1.0.1 before 1.0.1g do not properly handle Heartbeat Extension packets, which allows remote attackers to obtain sensitive information from process memory via crafted packets that trigger a buffer over-read, as demonstrated by reading private keys, related to d1_both.c and t1_lib.c, aka the Heartbleed bug.
+
+BugID:143857, Date:Wed Jul 30 19:13:22 2014, Author:李丹, Git:472bfbb1088f21a22a3bf20c79581a3461475859
+Google bug 13678484. Android Fake ID Vulnerability
+
+BugID:5164850. Date:Fri Aug 8 16:39:27 2014, Author:李丹, Git:72020ea74e54dc93c3e4134c2ffe02dfabb8251c
+CVE-2014-3153. The futex_requeue function in kernel/futex.c in the Linux kernel through 3.14.5 does not ensure that calls have two different futex addresses, which allows local users to gain privileges via a crafted FUTEX_REQUEUE command that facilitates unsafe waiter modification.
+
+BugID:5164820, Date:Fri Aug 8 16:27:00 2014, Author:李丹, Git:268c1c020f63521be4d26dad5381ce8802cd23b7
+CVE-2014-0196. The n_tty_write function in drivers/tty/n_tty.c in the Linux kernel through 3.14.3 does not properly manage tty driver access in the "LECHO & !OPOST" case, which allows local users to cause a denial of service (memory corruption and system crash) or gain privileges by triggering a race condition involving read and write operations with long strings.
+
+BugID:5164834, Date:Fri Aug 8 17:04:18 2014, Author:李丹, Git:4f4c12f4017a8135fbefeaf9a5138554db3e1b33
+CVE-2013-0871. Race condition in the ptrace functionality in the Linux kernel before 3.7.5 allows local users to gain privileges via a PTRACE_SETREGS ptrace system call in a crafted application, as demonstrated by ptrace_death.
+
+BugID:109630, Date:Thu Apr 10 19:09:25 2014, Author:余新化, Git:effb3ecbd0a7fdf96759f694c89608d5802f48f3
+CVE-2014-0069. The cifs_iovec_write function in fs/cifs/file.c in the Linux kernel through 3.13.5 does not properly handle uncached write operations that copy fewer than the requested number of bytes, which allows local users to obtain sensitive information from kernel memory, cause a denial of service (memory corruption and system crash), or possibly gain privileges via a writev system call with a crafted pointer.
+
+BugID:109355, Date:Thu Apr 10 11:13:02 2014, Author:余新化, Git:3c32275fcacc8428e4ebd91b6cdc80fd879e2067
+CVE-2014-1874. The security_context_to_sid_core function in security/selinux/ss/services.c in the Linux kernel before 3.13.4 allows local users to cause a denial of service (system crash) by leveraging the CAP_MAC_ADMIN capability to set a zero-length security context.
+
+BugID:109213, Date:Wed Apr 9 17:55:32 2014, Author:余新化, Git:5a65f54d08d36a7fcc60a8091fc9a893e862296d
+CVE-2014-2523. net/netfilter/nf_conntrack_proto_dccp.c in the Linux kernel through 3.13.6 uses a DCCP header pointer incorrectly, which allows remote attackers to cause a denial of service (system crash) or possibly execute arbitrary code via a DCCP packet that triggers a call to the (1) dccp_new, (2) dccp_packet, or (3) dccp_error function.
+
+

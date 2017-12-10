@@ -1,0 +1,22 @@
+menuconfig ALIYUNOS_SECURITY_SOLUTION
+        bool "YUNOS SECURITY properity Configuration"
+        help
+            Check this to enable Yunos Security properity configuration.
+
+if ALIYUNOS_SECURITY_SOLUTION
+
+config ALIYUNOS_SECURITY_MODE
+	tristate "Enable yunos security mode"	
+
+config ALIYUNOS_DOMAIN
+        tristate "Enable yunos domain security control"
+
+config ALIYUNOS_AUDIT
+        tristate "Enable yunos security audit"
+
+config ALIYUNOS_PIGGY
+	tristate "Enable yunos security kernel image encrypt"
+
+endif
+
+

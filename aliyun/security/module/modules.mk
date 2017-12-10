@@ -1,0 +1,5 @@
+ALI_INC += 
+ALI_CDEFS += 
+ifneq ($(ALIYUNOS_NO_ALISEC),true)
+drivers-$(CONFIG_ALIYUNOS_DOMAIN)	+= $(YUNOS_SECURITY_MODULE_DIR)/alisec/
+endif

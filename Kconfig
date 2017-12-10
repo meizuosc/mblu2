@@ -1,0 +1,16 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+mainmenu "Linux/$ARCH $KERNELVERSION Kernel Configuration"
+
+config SRCARCH
+	string
+	option env="SRCARCH"
+
+source "arch/$SRCARCH/Kconfig"
+##//*YUNOS BEGIN*/
+##//##module(MAKE-CONFIG)
+##//##date:2014-02-11 ##author:jian.hj
+source "aliyun/security/stub/Kconfig"
+##//*YUNOS END*/

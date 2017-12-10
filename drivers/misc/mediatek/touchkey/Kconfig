@@ -1,0 +1,5 @@
+config MTK_TOUCHKEY
+  bool CONFIG_MTK_TOUCHKEY
+  default n
+  help
+    CONFIG_MTK_TOUCHKEY
